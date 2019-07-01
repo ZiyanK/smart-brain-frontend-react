@@ -23,7 +23,7 @@ class Register extends React.Component {
     }
 
     onSumbitSignIn = () => {
-        fetch('https://tranquil-wave-85569.herokuapp.com/register', {
+        fetch('https://localhost:3000/register', {
             method: 'post',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({

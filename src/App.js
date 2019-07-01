@@ -76,7 +76,7 @@ class App extends Component {
 
   onButtonSubmit = () => {
     this.setState({imageURL: this.state.input});
-    fetch('https://tranquil-wave-85569.herokuapp.com/imageurl', {
+    fetch('https://localhost:3000/imageurl', { //https://tranquil-wave-85569.herokuapp.com
             method: 'post',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
@@ -86,7 +86,7 @@ class App extends Component {
           .then(response => response.json())
           .then(response => {
             if (response) {
-              fetch('https://tranquil-wave-85569.herokuapp.com/image', {
+              fetch('https://localhost:3000/image', { //https://tranquil-wave-85569.herokuapp.com
                 method: 'put',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({
@@ -106,7 +106,7 @@ class App extends Component {
 
   onRouteChange = (route) => {
     if(route === 'signout') {
-      this.setState(initialState)
+      this.setState({route: initialState})
     } else if(route === 'home') {
       this.setState({isSignedIn: true})
     }
