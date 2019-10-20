@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import Particles from 'react-particles-js';
 import Navigation from './components/Navigation/Navigation.js';
 import SignIn from  './components/SignIn/SignIn.js';
