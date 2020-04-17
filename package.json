@@ -1,6 +1,5 @@
 {
   "name": "smart_brain",
-  "homepage": ".",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
